@@ -1,0 +1,9 @@
+Video tutorial para instalar Raspian en un Raspberry Pi:
+https://www.raspberrypi.org/help/noobs-setup/
+con una tarjeta SD de 8GB, tenemos una tarjeta micro SD
+
+Tutorial del espejo:
+http://blog.dylanjpierce.com/raspberrypi/magicmirror/tutorial/2015/12/27/build-a-magic-mirror.html
+
+Como agregar calendario de google:
+http://mirrormirror.tech/t/update-1-9-1-released/273
