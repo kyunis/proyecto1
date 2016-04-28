@@ -1,25 +1,14 @@
-Video tutorial para instalar Raspian en un Raspberry Pi:
-https://www.raspberrypi.org/help/noobs-setup/
-con una tarjeta SD de 8GB, tenemos una tarjeta micro SD
-
-Tutorial del espejo:
-http://blog.dylanjpierce.com/raspberrypi/magicmirror/tutorial/2015/12/27/build-a-magic-mirror.html
-
-Como agregar calendario de google:
-http://mirrormirror.tech/t/update-1-9-1-released/273
-
-<<<<<<< HEAD
 Trabajo (26/04/16):
 Se instala raspbian en el pi
 Se configura el acceso a intenet y se borran paquetes
-Se instalan lossiguientes paquetes para el web server: 
+Se instalan los siguientes paquetes para el web server: 
 	$sudo apt-get update sudo apt-get install nginx php5-fpm php5-cli php5-mcrypt git
 Info del Py:
 usuario:py
 contraseña: Ayay-tuti
 
 Cambios (28/04/16 - Moi):
-se edita el autostart par midori:
+se edita el autostart para midori:
 	$ sudo nano /etc/xdg/lxsession/LXDE/autostart
 Se comenta todo con # y se agregan las siguientes lineas a autostart:
 
@@ -33,7 +22,18 @@ Se agrega un archivo, mirror.conf al repositorio de github
 
 Se edita el archivo mirror.conf: 
 	$ sudo nano /etc/nginx/sites-available/mirror.conf
-=======
+	
+Creamos la careta proyects en hoe del py:
+	$ mkdir /home/pi/projects
 
->>>>>>> dac6fddde7b64808b60d4ed511e0938965f55ada
 
+Se accede por ssh para seguir la clonacion de MirrorMirror y composer con lumen dependencies:
+
+	$ git clone https://github.com/ctrlaltdylan/MirrorMirror.git
+	$ curl -sS https://getcomposer.org/installer | sudo php -- --install-dir=/usr/local/bin --filename=composer
+
+Ponemos localhost como pág de inicio en midori
+
+Instalamos las dependencias de lumen y cambiamos permisos para la edición
+	$ cd MirrorMirror composer install
+	$ sudo chmod -R 777 storage
