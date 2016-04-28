@@ -1,0 +1,39 @@
+Trabajo (26/04/16):
+Se instala raspbian en el pi
+Se configura el acceso a intenet y se borran paquetes
+Se instalan los siguientes paquetes para el web server: 
+	$sudo apt-get update sudo apt-get install nginx php5-fpm php5-cli php5-mcrypt git
+Info del Py:
+usuario:py
+contraseña: Ayay-tuti
+
+Cambios (28/04/16 - Moi):
+se edita el autostart para midori:
+	$ sudo nano /etc/xdg/lxsession/LXDE/autostart
+Se comenta todo con # y se agregan las siguientes lineas a autostart:
+
+# Auto run the browser
+@xset s off
+@xset -dpms
+@xset s noblank
+@midori -e Fullscreen -a http://google.com
+
+Se agrega un archivo, mirror.conf al repositorio de github
+
+Se edita el archivo mirror.conf: 
+	$ sudo nano /etc/nginx/sites-available/mirror.conf
+	
+Creamos la careta proyects en hoe del py:
+	$ mkdir /home/pi/projects
+
+
+Se accede por ssh para seguir la clonacion de MirrorMirror y composer con lumen dependencies:
+
+	$ git clone https://github.com/ctrlaltdylan/MirrorMirror.git
+	$ curl -sS https://getcomposer.org/installer | sudo php -- --install-dir=/usr/local/bin --filename=composer
+
+Ponemos localhost como pág de inicio en midori
+
+Instalamos las dependencias de lumen y cambiamos permisos para la edición
+	$ cd MirrorMirror composer install
+	$ sudo chmod -R 777 storage

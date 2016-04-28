@@ -7,5 +7,6 @@ http://blog.dylanjpierce.com/raspberrypi/magicmirror/tutorial/2015/12/27/build-a
 
 Como agregar calendario de google:
 http://mirrormirror.tech/t/update-1-9-1-released/273
-asasasasasasasasasasa
-sdndskladsmcmcmcmmcmcmcñs
+
+
+
