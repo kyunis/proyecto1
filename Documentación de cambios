@@ -23,7 +23,7 @@ Se agrega un archivo, mirror.conf al repositorio de github
 Se edita el archivo mirror.conf: 
 	$ sudo nano /etc/nginx/sites-available/mirror.conf
 	
-Creamos la careta proyects en hoe del py:
+Creamos la carpeta proyects en home del py:
 	$ mkdir /home/pi/projects
 
 
@@ -37,3 +37,21 @@ Ponemos localhost como pág de inicio en midori
 Instalamos las dependencias de lumen y cambiamos permisos para la edición
 	$ cd MirrorMirror composer install
 	$ sudo chmod -R 777 storage
+
+
+Moisés, cambios (29/04/16):
+Epiphany y script
+	
+Cambios (28/04/16 - Moi):
+configuramos el nombre del servidor en raspi.config:
+	$ sudo raspi-config
+	advanced options > Hostname
+	Script para inicio de navegador en localhost/MagicMagic
+
+
+sudo apt-get install xautomation
+
+sudo nano /usr/share/raspi-ui-overrides/applications/epiphany-browser.desktop
+
+
+
